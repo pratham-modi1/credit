@@ -399,6 +399,10 @@ rf_model, amount_scaler, hour_scaler, models_loaded = load_models()
 @st.cache_data
 def load_data():
     try:
+        if not os.path.exists("creditcard.csv"):
+            st.warning("Dataset not found. Pulling from Git LFS...")
+            os.system("git lfs pull")
+
         df = pd.read_csv('creditcard.csv')
         df = df.drop_duplicates()
         df["Hour"] = (df["Time"] / 3600) % 24
