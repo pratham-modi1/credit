@@ -873,7 +873,7 @@ def page_visualizations():
                     xticklabels=['Pred: Legit', 'Pred: Fraud'],
                     yticklabels=['Actual: Legit', 'Actual: Fraud'],
                     ax=ax, linewidths=2.5, linecolor=PLOT_BG,
-                    annot_kws={'size': 16, 'weight': 'bold', 'color': PLOT_WHITE})
+                    annot_kws={'size': 16, 'weight': 'bold', 'color': '#111111'})
         ax.set_title('Confusion Matrix — RF Tuned (Threshold 0.4)',
                      color=PLOT_WHITE, fontweight='bold', pad=14, fontsize=12)
         ax.tick_params(colors=PLOT_TEXT, labelsize=10)
